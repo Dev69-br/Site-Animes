@@ -234,7 +234,7 @@ html,body{height: 100%;}
 
 @media screen and (max-width: 1700px){
     .main-col{
-        width: 100%;
+        width: 15%;
     }
 }
 

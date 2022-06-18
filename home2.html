@@ -29,22 +29,217 @@
             <div class="sidebar-menu">
                 <p class="sidebar-menu-title">Playlist</p>
                 <div class="sidebar-menu-item">
-                    <div class="sidebar-menu-componente">
+                    <div class="sidebar-menu-item-componente">
                         +
                     </div>
                     <span>Criar Playlist</span>
                 </div>
                 <div class="sidebar-menu-item">
-                    <div class="sidebar-menu-componente">
-                        <i class="fa-solid fa-bomb"></i>
+                    <div class="sidebar-menu-item-componente">
+                       #
                     </div>
                     <span>Musicas Curtidas</span>
                 </div>
             </div>
+            <div class="sidebar-playlist">
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+            </div><!--Sidebar Playlist-->
+
+            <div class="sidebar-playlist">
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+            </div><!--Sidebar Playlist-->
+
+            <div class="sidebar-playlist">
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+                <a href="#">Playlist 1</a>
+            </div><!--Sidebar Playlist-->
+
+        </div><!--wrapper-->
+    </div>
+
+    <div class="main">
+        <div class="main-wrapper">
+
+            <div class="main-row">
+                 
+                <div class="main-row-title"><h2>Paradas</h2></div>
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+                <div class="main-col" data-image="imagens/poesia.jpg.png" data-artist="cabelinho" data-song="poesia acustica 6" data-file="musicas/poesia.mp3">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+               
+            </div><!--main row 2-->
+            <div class="main-row">
+                 
+                <div class="main-row-title"><h2>Recomendadas</h2></div>
+                <div class="main-col" data-image="imagens/poesia.jpg.png" data-artist="cabelinho" data-song="poesia acustica 6" data-file='musicas/poesia.mp3'>
+                    <img src="imagens/poesia.jpg.png" alt="">
+                    <h3>Poesia Acustica #6</h3>
+                    <p> Era Uma Vez Part Mc Cabelinho,orochi</p>
+                </div><!--Colunas-->
+
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+                <div class="main-col">
+                    <img src="imagens/poesia.jpg" alt="">
+                    <h3>Poesia Acustica</h3>
+                    <p>Todas As Poesias</p>
+                </div><!--Colunas-->
+
+
+            </div><!--main row-->
+
+
+        </div><!--wrapper-->
+    </div>
+
+
+    <div class="player">
+        <div class="player-artist">
 
         </div>
-    </div>
+        <div class="player-control">
+            <div class="player-controll-buttons">
+                <a href="#"><i class="fas fa-backward"></i></a>
+                <a style="display: none ;" id="pausebtn" href="#"><i class="far fa-pause-circle"></i></a>
+                <a id="playbtn" href="#"><i class="far fa-play-circle"></i></a>
+                <a href="#"><i class="fas fa-forward"></i></a>
+            </div>
+
+
+            <div class="player-control-progress">
+                <div class="player-control-progress2">
+
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div><!--Player-->
+
+    <audio  id="audioplayer" style="position: absolute;left:0;top:0;z-index: 0;opacity:100;" controls="">
+        <source src="" type="">
+    </audio>
     <script src="https://kit.fontawesome.com/09f3464ee9.js" crossorigin="anonymous"></script>
+    <script>
+        var audioplayer=document.getElementById('audioplayer')
+        var loaded = false;
+
+        var playbtn = document.getElementById('playbtn')
+        var pausebtn = document.getElementById('pausebtn')
+
+
+
+        pausebtn.addEventListener('click',(e)=>{
+            e.preventDefault();
+
+            playbtn.style.display = 'inline';
+            pausebtn.style.display = 'none';
+
+            return false;
+
+        })
+
+        const playerSoung = (file)=>{
+            if(loaded == false){
+                audioplayer.innerHTML = `<source src="`+file+`" type="musicas/poesia.mp3">`
+                loaded = true;
+            }
+            audioplayer.play();
+            playbtn.style.display = 'none';
+            pausebtn.style.display = 'inline';
+        }
+        document.querySelectorAll('.main-col').forEach(item =>{
+            item.addEventListener('click',event=>{
+                let image = item.getAttribute('data-image');
+                let artist= item.getAttribute('data-artist');
+                let song = item.getAttribute('data-song');
+                let file = item.getAttribute('data-file');
+
+                let playerartistcomponet =document.getElementsByClassName('player-artist')
+
+                playerartistcomponet[0].innerHTML = `
+                <img src="`+image+`"/>
+                <h3>`+artist+`<br/><span>`+song+`</span></h3> `;
+                playersoung(file);
+            })
+            
+        });
+
+
+        function playersoung(file){
+            if(loaded == false){
+                audioplayer.innerHTML = `<source src='`+file+`' type="musicas/poesia.mp3"/>`
+                loaded = true
+            }
+            audioplayer.play();
+            playbtn.style.display = 'none';
+            pausebtn.style.display = 'inline';
+        }
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>

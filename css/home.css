@@ -45,7 +45,10 @@ body{
 #navbar .navbar-container ul li:nth-child(3){
     border-right: 1px solid white;
 }
-
+#navbar .navbar-container ul li:hover{
+    color: #1db954;
+    cursor: pointer;
+}
 /*ShowCase*/
 #showcase{
     height: 100vh;
@@ -81,6 +84,10 @@ body{
     border-radius: 30px;
     letter-spacing: 1px;
     font-weight: bold;
+}
+
+.btn-primary:hover{
+    background:#115e2c ;
 }
 
 /*footer*/

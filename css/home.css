@@ -84,10 +84,16 @@ body{
     border-radius: 30px;
     letter-spacing: 1px;
     font-weight: bold;
+    text-decoration: none;
+}
+.btn-primary a{
+    text-decoration: none;
+    color: white;
 }
 
 .btn-primary:hover{
     background:#115e2c ;
+    
 }
 
 /*footer*/
